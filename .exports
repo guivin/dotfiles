@@ -1,0 +1,42 @@
+export MANPATH="/usr/local/man:$MANPATH"
+
+# Color for manpages in less makes manpages easier to read
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+# Make vim the default editor
+export EDITOR="vim"
+
+# Language environment
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# History file
+export HISTFILE="$HOME/.history"
+
+# History timestamp format
+export HISTTIMEFORMAT="%F %T :"
+
+# History size
+export HISTSIZE=10000
+
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL="ignoreboth"
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING="UTF-8"
+
+# Compilation flags
+#export ARCHFLAGS="-arch $(uname -p)"
+
+# Golang
+export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
+export PYENV_ROOT=$(pyenv root)
+export PYENV_SHIMS="$PYENV_ROOT/shims"
+export PATH="$PATH:/usr/local/bin:/usr/local/opt/sqlite/bin:$HOME/.local/bin:$GOPATH:$GOBIN:$PYENV_SHIMS"

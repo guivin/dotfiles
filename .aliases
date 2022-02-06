@@ -1,0 +1,45 @@
+OS=$(command uname -s)
+
+if [[ "${OS}" == "Darwin" ]]; then
+  # macOS has no md5sum so we use md5 as fallback
+  command -v md5sum > /dev/null || alias md5sum="md5"
+
+  # macOS has no sha1sum so we use shasum as fallback
+  command -v sha1sum > /dev/null || alias sha1sum="shasum"
+else
+  alias chown="chown --preserve-root"
+  alias chmod="chmod --preserve-root"
+  alias chgrp="chgrp --preserve-root"
+  alias ls="ls --color=auto"
+  alias grep="grep --color=auto"
+
+  eval "$(dircolors -b)"
+fi
+
+## Common for all OS
+
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias mkdir="mkdir -p"
+alias diff="colordiff"
+alias mount="mount | column -t"
+alias c="clear"
+alias h="history"
+alias j="jobs -l"
+
+# ask for confirmation
+alias cp="cp -i"
+alias mv="mv -i"
+alias ln="ln -i"
+
+# IP addresses
+alias my_public_ip="curl ip.me"
+
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+
+alias python="$PYENV_SHIMS/python"
+alias pip="$PYENV_SHIMS/pip"
+
+# Canonical hex dump; some systems have this symlinked
+command -v hd > /dev/null || alias hd="hexdump -C"
