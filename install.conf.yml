@@ -1,0 +1,28 @@
+---
+
+- defaults:
+    links:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.aliases: .aliases
+    ~/.bashrc: .bashrc
+    ~/.editorconfig: .editorconfig
+    ~/.exports: .exports
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore: .gitignore
+    ~/.osx: .osx
+    ~/.screenrc: .screenrc
+    ~/.vimrc: .vimrc
+
+- shell:
+    - ["rm -rf ~/.oh-my-zsh && sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"", "Installing oh-my-zsh"]
+    - ["rm -rf $ZSH_CUSTOM/plugins/zsh-autosuggestion && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions", "Installing zsh-autosuggestion"]
+    - ["rm -rf $ZSH_CUSTOM/plugins/zsh-syntax-highlighting && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting", "Installing zsh-syntax-highlighting"]
+    - ["rm -rf $ZSH_CUSTOM/plugins/zsh-completions && git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions", "Installing zsh-completions"]
+    - ["ln -s -f $PWD/.zshrc ~/.zshrc", "Creating symlink for .zshrc in $HOME"]
+    - ["rm -rf ~/.vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim", "Installing Vundle"]

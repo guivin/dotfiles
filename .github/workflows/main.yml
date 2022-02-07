@@ -1,0 +1,35 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  integration:
+    name: Integration
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-10.15
+
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v2
+
+      - name: Install homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+      - name: Install system prerequisites
+        run: brew install openssl readline sqlite3 xz zlib pyenv most zsh vim
+
+      - name: Install python prerequisites
+        run: python -m pip install --user -r requirements.txt
+
+      - name: Remove existing dotfiles
+        run: |
+          rm $HOME/.gitconfig
+          rm $HOME/.bashrc
+
+      - name: Deploy dotfiles with dotbot
+        run: python -m dotbot -c install.conf.yml
