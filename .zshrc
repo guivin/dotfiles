@@ -75,7 +75,6 @@ if [[ -f "$HOME/.exports" ]]; then
     source "$HOME/.exports"
 fi
 
-
 # Source aliases
 if [[ -f "$HOME/.aliases" ]]; then
     source "$HOME/.aliases"

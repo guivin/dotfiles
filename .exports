@@ -28,15 +28,12 @@ export HISTSIZE=10000
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL="ignoreboth"
 
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING="UTF-8"
-
-# Compilation flags
-#export ARCHFLAGS="-arch $(uname -p)"
-
 # Golang
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
+
+# Python
+export PYTHONIOENCODING="UTF-8"
 export PYENV_ROOT=$(pyenv root)
 export PYENV_SHIMS="$PYENV_ROOT/shims"
 export PATH="$PATH:/usr/local/bin:/usr/local/opt/sqlite/bin:$HOME/.local/bin:$GOPATH:$GOBIN:$PYENV_SHIMS"

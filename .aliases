@@ -16,8 +16,7 @@ else
   eval "$(dircolors -b)"
 fi
 
-## Common for all OS
-
+# Common for all OS
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias mkdir="mkdir -p"
@@ -27,15 +26,15 @@ alias c="clear"
 alias h="history"
 alias j="jobs -l"
 
-# ask for confirmation
+## ask for confirmation
 alias cp="cp -i"
 alias mv="mv -i"
 alias ln="ln -i"
 
-# IP addresses
-alias my_public_ip="curl ip.me"
+## IP addresses
+alias my_public_ip="curl https://ip.me"
 
-# Show active network interfaces
+## Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
 alias python="$PYENV_SHIMS/python"

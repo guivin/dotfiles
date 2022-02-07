@@ -1,6 +1,7 @@
 # guivin's dotfiles
 
-Here is my daily configuration. I use MacOS, so I can only guarantee dotfiles will work on a Mac.
+Here is my daily configuration. I use MacOS, so I can only guarantee dotfiles will work on a Mac even if I use it
+sometimes on Linux.
 
 ## Installation (on MacOS)
 
@@ -15,7 +16,7 @@ python versions with `pyenv install --list`. Next you can define it as default v
 
 ```
 $ xcode-select --install
-$ brew install openssl readline sqlite3 xz zlib vim most zsh
+$ brew install openssl readline sqlite3 xz zlib vim most zsh colordiff lesspipe
 $ brew install pyenv
 $ pyenv install <python_version>
 $ pyenv global <python_version>
