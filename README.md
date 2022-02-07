@@ -1,4 +1,4 @@
-# guivin's dotfiles
+# guivin's dotfiles [![.github/workflows/main.yml](https://github.com/guivin/dotfiles/actions/workflows/main.yml/badge.svg)](https://github.com/guivin/dotfiles/actions/workflows/main.yml)
 
 Here is my daily configuration. I use MacOS, so I can only guarantee dotfiles will work on a Mac even if I use it
 sometimes on Linux.

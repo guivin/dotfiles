@@ -15,7 +15,6 @@
     ~/.exports: .exports
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
-    ~/.osx: .osx
     ~/.screenrc: .screenrc
     ~/.vimrc: .vimrc
 
