@@ -16,6 +16,9 @@ precomposeunicode = false
 # https://git-scm.com/docs/git-update-index#_untracked_cache
 untrackedCache = true
 
+# global gitignore
+excludesfile = /Users/gvincent/.gitignore
+
 [init]
 defaultBranch = main
 

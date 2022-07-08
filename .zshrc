@@ -85,3 +85,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 autoload -U promptinit; promptinit
+
+GOOGLE_SDK_DIR="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+
+if [[ -d $GOOGLE_SDK_DIR ]]; then
+  source "$GOOGLE_SDK_DIR/path.zsh.inc"
+  source "$GOOGLE_SDK_DIR/completion.zsh.inc"
+fi
