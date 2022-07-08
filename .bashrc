@@ -174,3 +174,10 @@ function __setprompt
 }
 
 PROMPT_COMMAND='__setprompt'
+
+GOOGLE_SDK_DIR="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+
+if [[ -d $GOOGLE_SDK_DIR ]]; then
+  source "$GOOGLE_SDK_DIR/path.bash.inc"
+  source "$GOOGLE_SDK_DIR/completion.bash.inc"
+fi
