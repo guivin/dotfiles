@@ -80,6 +80,11 @@ if [[ -f "$HOME/.aliases" ]]; then
     source "$HOME/.aliases"
 fi
 
+# Source functions
+if [[ -f "$HOME/.functions" ]]; then
+    source "$HOME/.functions"
+fi
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
@@ -92,3 +97,8 @@ if [[ -d $GOOGLE_SDK_DIR ]]; then
   source "$GOOGLE_SDK_DIR/path.zsh.inc"
   source "$GOOGLE_SDK_DIR/completion.zsh.inc"
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

@@ -48,6 +48,11 @@ if [[ -f ~/.aliases ]]; then
     source ~/.aliases
 fi
 
+# Source functions
+if [[ -f "$HOME/.functions" ]]; then
+    source "$HOME/.functions"
+fi
+
 if [[ -z "$TMPDIR" ]]; then
     TMPDIR=/tmp
 fi
@@ -181,3 +186,5 @@ if [[ -d $GOOGLE_SDK_DIR ]]; then
   source "$GOOGLE_SDK_DIR/path.bash.inc"
   source "$GOOGLE_SDK_DIR/completion.bash.inc"
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

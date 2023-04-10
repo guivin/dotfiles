@@ -1,0 +1,3 @@
+function iterm2\_print\_user\_vars() {
+  iterm2\_set\_user\_var gitProject $(basename $(git rev-parse --show-toplevel 2> /dev/null) 2> /dev/null)
+}
