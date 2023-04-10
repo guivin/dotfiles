@@ -69,3 +69,7 @@ signingkey = 7318180A7E6E654E
 
 [gpg]
 program = gpg
+
+[credential]
+helper = /usr/local/share/gcm-core/git-credential-manager
+
