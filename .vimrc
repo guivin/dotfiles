@@ -125,7 +125,7 @@ set modeline modelines=4
 set ignorecase
 
 " Always show status line
-set laststatus=2
+" set laststatus=2
 
 " Enable mouse in all modes
 set mouse=a
@@ -241,6 +241,14 @@ set cmdheight=2
 
 " Open new split panes to right and bottow which feels more natural
 set splitbelow splitright
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fzf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if system('uname') =~ "Darwin"
+  set rtp+=/opt/homebrew/opt/fzf
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping
