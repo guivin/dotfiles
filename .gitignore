@@ -19,3 +19,10 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# NodeJS
+node_modules
+node_modules/*
+
+# Intellj IDEA
+*.ml

@@ -40,5 +40,7 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 alias python="$PYENV_SHIMS/python"
 alias pip="$PYENV_SHIMS/pip"
 
+alias kubectl="kubecolor"
+
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"

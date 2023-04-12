@@ -35,5 +35,8 @@ export GOBIN=$GOPATH/bin
 # Python
 export PYTHONIOENCODING="UTF-8"
 export PYENV_ROOT=$(pyenv root)
-export PYENV_SHIMS="$PYENV_ROOT/shims"
-export PATH="$PATH:/usr/local/bin:/usr/local/opt/sqlite/bin:$HOME/.local/bin:$GOPATH:$GOBIN:$PYENV_SHIMS"
+export PYENV_SHIMS="${HOME}/.pyenv/shims"
+export PATH="$PATH:/usr/local/bin:/usr/local/opt/sqlite/bin:$HOME/.local/bin:$HOME/bin:$GOPATH:$GOBIN:$PYENV_SHIMS"
+
+# GCP
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True

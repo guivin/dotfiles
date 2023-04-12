@@ -17,7 +17,7 @@ precomposeunicode = false
 untrackedCache = true
 
 # global gitignore
-excludesfile = /Users/gvincent/.gitignore
+	excludesfile = /Users/guillaume-vincent/.gitignore
 
 [init]
 defaultBranch = main
@@ -64,7 +64,7 @@ followTags = true
 
 [user]
 name = Guillaume Vincent
-email = 23073977+vingcen@users.noreply.github.com
+email = 23073977+guivin@users.noreply.github.com
 signingkey = 7318180A7E6E654E
 
 [gpg]
@@ -73,3 +73,8 @@ program = gpg
 [credential]
 helper = /usr/local/share/gcm-core/git-credential-manager
 
+[filter "lfs"]
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
