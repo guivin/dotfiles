@@ -3,12 +3,17 @@ root = true
 
 # Default settings:
 # A newline ending every file
-# Use 4 spaces as indentation
+# Use 2 spaces as indentation
 [*]
 charset = utf-8
 indent_style = space
-indent_size = 2
+indent_size = 4
 insert_final_newline = true
+
+# Terraform
+[*.tf]
+indent_style=space
+indent_size=2
 
 # Visual Studio Solution Files
 [*.sln]
@@ -24,7 +29,7 @@ indent_size = 2
 
 # JSON Files
 [*.{json,json5}]
-indent_size = 2
+indent_size = 4
 
 # YAML Files
 [*.{yml,yaml}]
@@ -36,7 +41,7 @@ trim_trailing_whitespace = false
 
 # Web Files
 [*.{htm,html,js,ts,tsx,css,sass,scss,less,svg,vue}]
-indent_size = 2
+indent_size = 4
 
 # C# files
 # https://docs.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference#language-conventions
