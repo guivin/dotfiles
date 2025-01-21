@@ -12,7 +12,7 @@
     ~/.aliases: .aliases
     ~/.bashrc: .bashrc
     ~/.editorconfig: .editorconfig
-    ~/.functions: .functions
+    ~/.functions.sh: .functions.sh
     ~/.exports: .exports
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore

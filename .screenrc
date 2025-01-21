@@ -26,5 +26,10 @@ hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= 
 
 # Hide hardstatus: ctrl-a f
 bind f eval "hardstatus ignore"
+
 # Show hardstatus: ctrl-a F
 bind F eval "hardstatus alwayslastline"
+
+# Always start `screen` with UTF-8 enabled
+defutf8 on
+

@@ -162,8 +162,8 @@ set expandtab
 " Be smart when using tabs
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4 tabstop=4 softtabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Configure backspaces
 set backspace=indent,eol,start
