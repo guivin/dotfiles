@@ -6,9 +6,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 if [[ "$(uname -s)" == "Darwin" ]]; then
   BREW_PREFIX="$(brew --prefix)"
   fpath+=("${BREW_PREFIX}/share/zsh/site-functions")
-  export ZPLUG_HOME="${BREW_PREFIX}/opt/zplug"
 else
-  fpath+=($HOME/.zsh/pure)
   export ZPLUG_HOME="${HOME}/.zplug"
 fi
 
@@ -16,7 +14,7 @@ fi
 source $ZPLUG_HOME/init.zsh
 
 # Oh-My-Zsh theme and settings
-ZSH_THEME="agnoster"
+ZSH_THEME="bira"
 ZSH_DISABLE_COMPFIX="true"
 DISABLE_AUTO_UPDATE="true"
 
@@ -24,6 +22,10 @@ DISABLE_AUTO_UPDATE="true"
 autoload -U promptinit; promptinit
 
 # Enable autocompletions
+
+[[ -f "${ZSH_CUSTOM}/plugins/zsh-completions/zsh-autocomplete.plugin.zsh" ]] && \
+  source "${ZSH_CUSTOM}/plugins/zsh-completions/zsh-autocomplete.plugin.zsh"
+
 autoload -Uz compinit
 typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
 [[ "$(date +'%j')" != "$updated_at" ]] && compinit -i || compinit -C -i
@@ -79,7 +81,7 @@ plugins=(
   zsh-bat
   zsh-completions
   zsh-syntax-highlighting
-  you-should-use
+  zsh-you-should-use
 )
 
 # Source oh-my-zsh

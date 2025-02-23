@@ -26,5 +26,6 @@
     - ["rm -rf $ZSH_CUSTOM/plugins/zsh-you-should-use && git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-you-should-use", "Installing zsh-you-should-use"]
     - ["rm -rf $ZSH_CUSTOM/plugins/zsh-syntax-highlighting && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting", "Installing zsh-syntax-highlighting"]
     - ["rm -rf $ZSH_CUSTOM/plugins/zsh-completions && git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions", "Installing zsh-completions"]
+    - ["rm -rf $ZSH_CUSTOM/plugins/zsh-autocomplete && git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete", "Installing zsh-autocomplete"]
     - ["ln -s -f $PWD/.zshrc ~/.zshrc", "Creating symlink for .zshrc in $HOME"]
     - ["rm -rf ~/.vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim", "Installing Vundle"]
